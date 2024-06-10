@@ -13,6 +13,9 @@ form.addEventListener('submit', (e) => {
         messages.push('Password must be 6-20 characters');
     };
 
+    if (password.value === 'password') {
+        messages.push('Password cannot be password');
+    };
 
     if(messages.length > 0) {
         e.preventDefault();
